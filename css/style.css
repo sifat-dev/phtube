@@ -1,0 +1,27 @@
+.category-btn{
+    background: rgba(37, 37, 37, 0.15);
+    color: rgba(37, 37, 37, 0.70);
+}
+.category-btn-active, .blog-btn{
+    background: #FF1F3D;
+    color: white;
+}
+.btn{
+    padding: 3px 25px;
+}
+.qnabox p, .qnabox ol{
+    line-height: 50px;
+}
+.qnabox ol span{
+    font-weight: 700;
+}
+.qnabox ol > li > span{
+    font-weight: 800;
+    padding: 5px 10px;
+    background: gold;
+    color: rgb(48, 48, 48);
+    border-radius: 10px;
+}
+.qnabox img{
+    margin: 20px 0;
+}

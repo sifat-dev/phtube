@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/title-icon.png" type="image/x-icon">
+    <title>PH Tube</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container mx-auto flex flex-col gap-5 lg:flex-row md:flex-row justify-between items-center py-14 border-b-2">
+            <div class="logo-box">
+                <a href="index.html" class="text-4xl font-bold"><img src="images/Logo.png" class="inline" alt=""> Blog</a>
+            </div>
+            <div class="blog-btn-box">
+                <a href="blog.html"><button class="btn blog-btn">Blog</button></a>
+            </div>
+        </nav>
+    </header>
+    <main class="container mx-auto mt-8 text-center lg:text-left">
+        <div class="qnabox lg:w-9/12">
+            <h3 class="text-3xl font-semibold my-5">Topic 1: Discuss the scope of var, let, and const.</h3>
+            <p class="text-xl">
+                In JavaScript, var, let, and const are used to declare variables, but they have different scopes and behaviors. Understanding the scope of these variables is crucial for writing predictable and maintainable code. Here's a discussion of the scope of each:
+                <ol class="text-xl">
+                    <li>
+                        <span>var: </span>
+                        <ol>
+                            <li>
+                                <span>Function Scope:</span> Variables declared with var have function scope. They are accessible within the function in which they are defined or globally if declared outside of any function.
+                            </li>
+                            <li>
+                                <span>Hoisting:</span> Variables declared with var are hoisted to the top of their containing function or global scope. This means you can access them before they are declared, but they will have an initial value of undefined.
+                            </li>
+                        </ol>
+                        <img src="images/Screenshot_1.jpg" alt="">
+                    </li>
+                </ol>
+                <ol class="text-xl">
+                    <li>
+                        <span>let: </span>
+                        <ol>
+                            <li>
+                                <span>Block Scope: </span> Variables declared with let have block scope. They are accessible within the block (e.g., within {}) in which they are defined, including loops, conditionals, and functions.
+                            </li>
+                            <li>
+                                <span>No Hoisting:</span>  Unlike var, variables declared with let are not hoisted. You cannot access them before they are declared.
+                            </li>
+                        </ol>
+                        <img src="images/Screenshot_2.jpg" alt="">
+                    </li>
+                </ol>
+                <ol class="text-xl">
+                    <li>
+                        <span>const: </span>
+                        <ol>
+                            <li>
+                                <span>Block Scope: </span> Like let, variables declared with const have block scope.
+                            </li>
+                            <li>
+                                <span>Immutable:</span>Variables declared with const are constant and cannot be reassigned after they are declared. However, objects and arrays declared with const can have their properties or elements modified.
+                            </li>
+                        </ol>
+                        <img src="images/Screenshot_3.jpg" alt="">
+                    </li>
+                </ol>
+                In modern JavaScript, it's recommended to use let and const over var because they offer block scope and have more predictable behavior. const should be used for variables that shouldn't be reassigned, while let is suitable for variables that need to change their values. It's important to choose the appropriate variable declaration based on the desired scope and behavior to write clean and maintainable code.
+            </p>
+        </div>
+        <br><hr><br>
+        <div class="qnabox lg:w-9/12">
+            <h3 class="text-3xl font-semibold my-5">Topic 2: Tell us the use cases of null and undefined.</h3>
+            <p class="text-xl">
+                In JavaScript, null and undefined are two distinct values with specific use cases:
+                <ol class="text-xl">
+                    <li>
+                        <span>null:</span>
+                        <ol>
+                            <li>
+                                <span>xplicitly Set Absence of Value: </span>null is often used to represent the intentional absence of any object value or value that doesn't exist yet.
+                            </li>
+                            <li>
+                                <span>As a Placeholder:</span>  It can be used as a placeholder for an object or value that will be assigned later.
+                            </li>
+                            <li>
+                                <span>Return Value for Functions: </span> Some functions return null to indicate that they did not find a valid value or object.
+                            </li>
+                        </ol>
+                        <img src="images/Screenshot_4.jpg" alt="">
+                    </li>
+                </ol>
+                <ol class="text-xl">
+                    <li>
+                        <span>undefined: </span>
+                        <ol>
+                            <li>
+                                <span>Default Value:  </span> Variables that are declared but not initialized have the value undefined. Function parameters that are not provided when calling a function also have the value undefined.
+                            </li>
+                            <li>
+                                <span>Property That Doesn't Exist: </span> If you try to access an object property that doesn't exist, it returns undefined.
+                            </li>
+                            <li>
+                                <span>Return Value for Functions: </span>  If a function doesn't explicitly return a value, it implicitly returns undefined.
+                            </li>
+                        </ol>
+                        <img src="images/Screenshot_5.jpg" alt="">
+                    </li>
+                </ol>
+                <ol class="text-xl list-disc">
+                    Use Cases Summary:
+                    <li>
+                        Use null when you want to explicitly indicate the absence of a value or as a placeholder.
+                    </li>
+                    <li>
+                        Use undefined when a variable is declared but not initialized, for function parameters that are not provided, or for accessing non-existent properties.
+                    </li>
+                </ol>
+            </p>
+        </div>
+        <br><hr><br>
+        <div class="qnabox lg:w-9/12">
+            <h3 class="text-3xl font-semibold my-5">Topic 3: What do you mean by REST API?</h3>
+            <p class="text-xl">
+                REST API stands for Representational State Transfer Application Programming Interface. It is an architectural style and a set of constraints for designing networked applications. REST is not a protocol; instead, it's a set of principles and constraints that guide how resources are defined and addressed in a distributed system. <br>
+                Key characteristics and principles of RESTful APIs include:
+                <ol class="text-xl">
+                    <li>
+                        <span>Statelessness: </span>Each HTTP request from a client to a server must contain all the information needed to understand and fulfill the request. The server should not store any client-specific state between requests. This makes APIs scalable and easier to maintain.
+                    </li>
+                    <li>
+                        <span>Client-Server Architecture: </span>The client and server are separate entities that communicate over a network. The client is responsible for the user interface and user experience, while the server is responsible for processing requests and managing resources.
+                    </li>
+                    <li>
+                        <span>Uniform Interface: </span>RESTful APIs have a consistent and uniform way of interacting with resources. This includes using standard HTTP methods (GET, POST, PUT, DELETE) and using resource URIs (Uniform Resource Identifiers) to access and manipulate resources.
+                    </li>
+                    <li>
+                        <span>Resource-Based: </span> Resources are the key abstractions in REST. Each resource is identified by a unique URI, and clients can interact with these resources using standard HTTP methods. Resources can represent data objects, services, or entities.
+                    </li>
+                    <li>
+                        <span>Representation: </span>Resources can have multiple representations (e.g., JSON, XML, HTML) to represent their state. Clients request and manipulate these representations, and the server should respond with the appropriate representation based on the client's request headers.
+                    </li>
+                    <li>
+                        <span>Stateless Communication: </span>Each request from the client to the server must be self-contained and not rely on previous requests. This means that the server does not store client state between requests, making it easier to scale horizontally.
+                    </li>
+                    <li>
+                        <span>Layered System: </span>A RESTful architecture can include multiple layers, such as load balancers, caches, and gateways, to improve scalability, security, and performance. Each layer should be loosely coupled and have a well-defined interface.
+                    </li>
+                    RESTful APIs are commonly used in web development to create web services that can be consumed by various clients, such as web browsers, mobile apps, and other services. They provide a simple and standardized way to interact with resources over the internet, making them a popular choice for building modern web applications and microservices.
+                </ol>
+            </p>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    
+
+    <script src="js/script.js"></script>
+</body>
+</html>
